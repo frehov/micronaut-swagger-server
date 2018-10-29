@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger-ui</title>
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui.css">
+
+    <script src="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui-standalone-preset.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui-bundle.js"></script>
+</head>
+<body>
+    <div id="swagger-ui"></div>
+
+    <script>
+        window.onload = function() {
+            // Build a system
+            var ui = SwaggerUIBundle({
+                urls: [
+                    {
+                        url: "/api-docs/swagger/ubw-rest-0.1.yml",
+                        name: "UBW-API"
+                    }
+                ],
+                dom_id: '#swagger-ui',
+                deepLinking: true,
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                layout: "StandaloneLayout"
+            });
+            window.ui = ui
+        }
+    </script>
+</body>
+</html>

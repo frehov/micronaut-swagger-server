@@ -1,0 +1,16 @@
+micronaut:
+    application:
+        name: ubw-rest
+        instance: ${random.uuid}
+        version: 0.1
+    server:
+        port: 9090
+    router:
+        static-resources:
+            swagger:
+                paths: classpath:META-INF/swagger
+                mapping: /api-docs/swagger/**
+    views:
+        handlebars:
+            enabled: true
+            #extension: mustache
