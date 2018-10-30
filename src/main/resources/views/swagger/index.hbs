@@ -12,16 +12,15 @@
 </head>
 <body>
     <div id="swagger-ui"></div>
-
     <script>
         window.onload = function() {
             var ui = SwaggerUIBundle({
-                urls: [
-                    {
-                        url: "{{path}}/ubw-rest-0.1.yml",
-                        name: "UBW-API"
-                    }
-                ],
+                urls: [{{#each urls}}
+                   {
+                        name: "{{name}}",
+                        url: "{{url}}"
+                    }{{#unless @last}},{{/unless}}
+                {{/each}}],
                 dom_id: '#swagger-ui',
                 deepLinking: {{deepLinking}},
                 presets: [
