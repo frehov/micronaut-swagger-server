@@ -3,7 +3,7 @@ application:
         rootPath: /api
         swagger:
             path: /api-docs/swagger
-            version: 3.12.1
+            version: 3.19.4
             layout: StandaloneLayout
             deepLinking: true
 
