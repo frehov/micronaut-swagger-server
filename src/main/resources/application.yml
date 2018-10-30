@@ -1,3 +1,12 @@
+application:
+    api:
+        rootPath: /api
+        swagger:
+            path: /api-docs/swagger
+            version: 3.12.1
+            layout: StandaloneLayout
+            deepLinking: true
+
 micronaut:
     application:
         name: ubw-rest
@@ -9,7 +18,7 @@ micronaut:
         static-resources:
             swagger:
                 paths: classpath:META-INF/swagger
-                mapping: /api-docs/swagger/**
+                mapping: ${application.api.swagger.path}/**
     views:
         handlebars:
             enabled: true

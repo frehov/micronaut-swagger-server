@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Swagger-ui</title>
 
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@{{version}}/swagger-ui.css">
 
-    <script src="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui-standalone-preset.js"></script>
-    <script src="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui-bundle.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@{{version}}/swagger-ui-standalone-preset.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@{{version}}/swagger-ui-bundle.js"></script>
 </head>
 <body>
     <div id="swagger-ui"></div>
@@ -18,12 +18,12 @@
             var ui = SwaggerUIBundle({
                 urls: [
                     {
-                        url: "/api-docs/swagger/ubw-rest-0.1.yml",
+                        url: "{{path}}/ubw-rest-0.1.yml",
                         name: "UBW-API"
                     }
                 ],
                 dom_id: '#swagger-ui',
-                deepLinking: true,
+                deepLinking: {{deepLinking}},
                 presets: [
                     SwaggerUIBundle.presets.apis,
                     SwaggerUIStandalonePreset
@@ -31,7 +31,7 @@
                 plugins: [
                     SwaggerUIBundle.plugins.DownloadUrl
                 ],
-                layout: "StandaloneLayout"
+                layout: "{{layout}}"
             });
             window.ui = ui
         }

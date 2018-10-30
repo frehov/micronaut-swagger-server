@@ -2,6 +2,9 @@ package com.crappyegineering.ubw.controller;
 
 import static io.micronaut.http.HttpResponse.ok;
 
+import javax.inject.Inject;
+
+import com.crappyegineering.ubw.SwaggerConfig;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -12,9 +15,12 @@ import io.swagger.v3.oas.annotations.Hidden;
 @Controller("/api")
 public class SwaggerController {
 
+    @Inject
+    SwaggerConfig config;
+
     @View("swagger/index")
     @Get
     public HttpResponse index() {
-        return ok();
+        return ok(config);
     }
 }
