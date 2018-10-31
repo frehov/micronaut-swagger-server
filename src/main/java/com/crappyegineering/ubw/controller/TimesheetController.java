@@ -1,5 +1,6 @@
 package com.crappyegineering.ubw.controller;
 
+import com.ubw.unit4.AboutResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.HttpStatus;
@@ -13,4 +14,10 @@ public class TimesheetController {
     public HttpStatus index() {
         return HttpStatus.OK;
     }
+
+    @Get("/about")
+    public AboutResponse aboutResponse() {
+        return new AboutResponse();
+    }
+
 }

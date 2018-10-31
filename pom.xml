@@ -140,32 +140,6 @@
           </arguments>
         </configuration>
       </plugin>
-      <!--plugin>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-codegen-plugin</artifactId>
-        <version>2.7.9</version>
-        <executions>
-          <execution>
-            <id>generate-sources</id>
-            <phase>generate-sources</phase>
-            <configuration>
-              <sourceRoot>${project.build.directory}/generated/cxf</sourceRoot>
-              <wsdlOptions>
-                <wsdlOption>
-                  <wsdl>${basedir}/src/main/resources/TimesheetService.xml</wsdl>
-                  <extraargs>
-                    <extraarg>-impl</extraarg>
-                    <extraarg>-verbose</extraarg>
-                  </extraargs>
-                </wsdlOption>
-              </wsdlOptions>
-            </configuration>
-            <goals>
-              <goal>wsdl2java</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin-->
     </plugins>
     <pluginManagement>
       <plugins>

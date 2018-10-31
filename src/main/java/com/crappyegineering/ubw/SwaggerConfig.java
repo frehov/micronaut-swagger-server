@@ -14,8 +14,6 @@ public class SwaggerConfig {
     private boolean deepLinking;
     private List<URIConfig> urls;
 
-
-
     public String getVersion() {
         return version;
     }

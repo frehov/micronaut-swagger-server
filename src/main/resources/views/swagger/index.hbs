@@ -16,11 +16,11 @@
         window.onload = function() {
             var ui = SwaggerUIBundle({
                 urls: [{{#each urls}}
-                   {
+                    {
                         name: "{{name}}",
                         url: "{{url}}"
-                    }{{#unless @last}},{{/unless}}
-                {{/each}}],
+                    }{{#unless @last}},{{/unless}}{{/each}}
+                ],
                 dom_id: '#swagger-ui',
                 deepLinking: {{deepLinking}},
                 presets: [
