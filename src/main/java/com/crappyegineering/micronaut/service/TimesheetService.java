@@ -1,4 +1,4 @@
-package com.crappyegineering.ubw.service;
+package com.crappyegineering.micronaut.service;
 
 import javax.inject.Singleton;
 

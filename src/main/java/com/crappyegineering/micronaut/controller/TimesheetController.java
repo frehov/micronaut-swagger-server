@@ -1,23 +1,19 @@
-package com.crappyegineering.ubw.controller;
+package com.crappyegineering.micronaut.controller;
 
-import com.ubw.unit4.AboutResponse;
+import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import io.micronaut.http.HttpStatus;
+import io.micronaut.validation.Validated;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
-@Controller("/api/timesheet")
+@Validated
+@Controller("/api/ok")
 public class TimesheetController {
 
     @Get
     @ApiResponse(description = "Provides a simple OK back to the user")
     public HttpStatus index() {
         return HttpStatus.OK;
-    }
-
-    @Get("/about")
-    public AboutResponse aboutResponse() {
-        return new AboutResponse();
     }
 
 }

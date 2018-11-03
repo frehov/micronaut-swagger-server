@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.crappyengineering.ubw</groupId>
-  <artifactId>ubw-rest</artifactId>
+  <groupId>com.crappyengineering.micronaut</groupId>
+  <artifactId>swagger-server</artifactId>
   <version>0.1</version>
 
   <properties>
-    <exec.mainClass>com.crappyegineering.ubw.Application</exec.mainClass>
+    <exec.mainClass>com.crappyegineering.micronaut.Application</exec.mainClass>
     <micronaut.version>1.0.0</micronaut.version>
     <jdk.version>1.8</jdk.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -79,6 +79,16 @@
       <artifactId>handlebars</artifactId>
       <version>4.1.0</version>
       <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut</groupId>
+      <artifactId>micronaut-management</artifactId>
+      <version>${micronaut.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.configuration</groupId>
+      <artifactId>micronaut-micrometer-registry-prometheus</artifactId>
+      <version>${micronaut.version}</version>
     </dependency>
 
     <dependency>

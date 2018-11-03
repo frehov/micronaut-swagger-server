@@ -1,4 +1,4 @@
-package com.crappyegineering.ubw.controller;
+package com.crappyegineering.micronaut.controller;
 
 import static java.util.Collections.singletonList;
 
@@ -8,8 +8,8 @@ import javax.inject.Inject;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import com.crappyegineering.ubw.SwaggerConfig;
-import com.crappyegineering.ubw.SwaggerConfig.URIConfig;
+import com.crappyegineering.micronaut.SwaggerConfig;
+import com.crappyegineering.micronaut.SwaggerConfig.URIConfig;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
