@@ -150,6 +150,31 @@
           </arguments>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <version>0.10.0</version>
+        <configuration>
+          <to>
+            <image>${project.groupId}/${project.name}</image>
+          </to>
+          <from>
+            <image>openjdk:8u171-alpine3.7</image>
+          </from>
+          <container>
+            <useCurrentTimestamp>true</useCurrentTimestamp>
+            <mainClass>${exec.mainClass}</mainClass>
+          </container>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>install</phase>
+            <goals>
+              <goal>dockerBuild</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
