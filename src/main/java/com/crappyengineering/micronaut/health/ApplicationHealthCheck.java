@@ -1,4 +1,4 @@
-package com.crappyegineering.micronaut.health;
+package com.crappyengineering.micronaut.health;
 
 import io.micronaut.management.health.indicator.HealthIndicator;
 import io.micronaut.management.health.indicator.HealthResult;

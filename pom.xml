@@ -6,7 +6,7 @@
   <version>0.1</version>
 
   <properties>
-    <exec.mainClass>com.crappyegineering.micronaut.Application</exec.mainClass>
+    <exec.mainClass>com.crappyengineering.micronaut.Application</exec.mainClass>
     <micronaut.version>1.0.0</micronaut.version>
     <jdk.version>1.8</jdk.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

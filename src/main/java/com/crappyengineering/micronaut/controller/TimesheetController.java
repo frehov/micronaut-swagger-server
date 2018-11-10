@@ -1,4 +1,4 @@
-package com.crappyegineering.micronaut.controller;
+package com.crappyengineering.micronaut.controller;
 
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.Controller;

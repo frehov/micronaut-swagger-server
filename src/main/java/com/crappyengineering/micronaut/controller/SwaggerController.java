@@ -1,4 +1,4 @@
-package com.crappyegineering.micronaut.controller;
+package com.crappyengineering.micronaut.controller;
 
 import static java.util.Collections.singletonList;
 
@@ -8,8 +8,7 @@ import javax.inject.Inject;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import com.crappyegineering.micronaut.SwaggerConfig;
-import com.crappyegineering.micronaut.SwaggerConfig.URIConfig;
+import com.crappyengineering.micronaut.SwaggerConfig;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -17,6 +16,7 @@ import io.micronaut.http.annotation.Post;
 import io.micronaut.validation.Validated;
 import io.micronaut.views.View;
 import io.swagger.v3.oas.annotations.Hidden;
+import org.slf4j.LoggerFactory;
 
 @Hidden
 @Controller("/api")
@@ -29,6 +29,7 @@ public class SwaggerController {
     @View("swagger/index")
     @Get
     public SwaggerConfig index() {
+        LoggerFactory.getLogger(SwaggerController.class).info("Trying to render swagger-view");
         return config;
     }
 
@@ -39,7 +40,7 @@ public class SwaggerController {
                 .withDeepLinking(config.isDeepLinking())
                 .withLayout(config.getLayout())
                 .withVersion(config.getVersion())
-                .withUrls(singletonList(new URIConfig.Builder()
+                .withUrls(singletonList(new SwaggerConfig.URIConfig.Builder()
                         .withName(url)
                         .withURI(url)
                         .build()))
@@ -48,7 +49,7 @@ public class SwaggerController {
 
     @View("swagger/index")
     @Post
-    public SwaggerConfig renderSpecs(@Body @NotEmpty List<URIConfig> urls) {
+    public SwaggerConfig renderSpecs(@Body @NotEmpty List<SwaggerConfig.URIConfig> urls) {
         return new SwaggerConfig.Builder()
                 .withDeepLinking(config.isDeepLinking())
                 .withLayout(config.getLayout())

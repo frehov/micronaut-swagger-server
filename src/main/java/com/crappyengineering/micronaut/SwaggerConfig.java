@@ -1,4 +1,4 @@
-package com.crappyegineering.micronaut;
+package com.crappyengineering.micronaut;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.crappyegineering.micronaut;
+package com.crappyengineering.micronaut;
 
 import io.micronaut.runtime.Micronaut;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;

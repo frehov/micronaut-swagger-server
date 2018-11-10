@@ -16,8 +16,8 @@ micronaut:
         name: swagger-server
         instance: ${random.uuid}
         version: 0.1
-    server:
-        port: 9090
+#    server:
+#        port: 9090
     router:
         static-resources:
             swagger:
